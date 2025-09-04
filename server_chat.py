@@ -37,8 +37,9 @@ def server_start():
     while True:
         conn,addr = server.accept()
         clients.append(conn)
-        thread = threading.Thread(target=client, addr=(conn, addr))
+        thread = threading.Thread(target=client, adgs=(conn, addr))
         thread.start()
 
 if __name__=="__main__":
     server_start()
+
